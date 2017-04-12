@@ -1,0 +1,17 @@
+<h1>Lista projektów</h1>
+ <div class="col-lg-12">
+<table class="table table-bordered table-">
+  <tr>
+    <th>Nazwa</th>
+    <th>Opis</th>
+  </tr>
+ 
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= project.description %></td>
+      <td><%= link_to 'Show', project_path(project) %></td>
+    </tr>
+  <% end %>
+</table>
+</div>
